@@ -23,11 +23,17 @@ namespace Inference_Engine
                 knowledge.Add(new KnowledgeBaseEntry(s));
             }
             Path solution = solver(knowledge, new KnowledgeBaseEntry("~a"));
+            LinkedList<string> results = new LinkedList<string>();
             while (solution.parent != null)
             {
-                System.Console.WriteLine(solution.toString());
+                results.AddFirst(solution.toString());
                 solution = solution.parent;
             }
+            foreach(string result in results)
+            {
+                System.Console.WriteLine(result);
+            }
+            
         }
         public static Path solver(Collection<KnowledgeBaseEntry> knowledge, KnowledgeBaseEntry start)
         {
@@ -35,7 +41,6 @@ namespace Inference_Engine
 
             Search search = new Search();
             search.addToFrontier(startpath);
-            System.Console.WriteLine("haps");
             while (!search.frontierIsEmpty())
             {
                 Path current = search.getFromFrontier();
