@@ -12,7 +12,7 @@ namespace Inference_Engine
     {
         static void Main(string[] args)
         {
-            
+            run();
 
         }
         public static void run()
@@ -52,19 +52,33 @@ namespace Inference_Engine
     }
     public class Path
     {
+        private static long _id = 0;
+
+        public long id;
         public Path parent;
         public KnowledgeBaseEntry current;
         public int g;
         public Path(KnowledgeBaseEntry current)
         {
+            id = _id++;
             g = 0;
             this.current = current;
         }
         public Path(Path parent,KnowledgeBaseEntry current)
         {
+            id = _id++;
             this.parent = parent;
             this.current = current;
             g = this.parent.g + 1;
+        }
+
+        public override bool Equals(Object obj)
+        {
+            return obj is Path && current.Equals(((Path)obj).current);
+        }
+        public override int GetHashCode()
+        {
+            return current.GetHashCode();
         }
     }
 }

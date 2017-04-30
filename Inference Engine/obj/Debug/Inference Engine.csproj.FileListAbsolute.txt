@@ -12,3 +12,10 @@ C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\bin\Deb
 C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\obj\Debug\Inference Engine.csprojResolveAssemblyReference.cache
 C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\obj\Debug\Inference Engine.exe
 C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\obj\Debug\Inference Engine.pdb
+C:\Users\Minteah\Source\Repos\IntroToAI\Inference Engine\bin\Debug\KnowledgeBase.txt
+C:\Users\Minteah\Source\Repos\IntroToAI\Inference Engine\bin\Debug\Inference Engine.exe.config
+C:\Users\Minteah\Source\Repos\IntroToAI\Inference Engine\bin\Debug\Inference Engine.exe
+C:\Users\Minteah\Source\Repos\IntroToAI\Inference Engine\bin\Debug\Inference Engine.pdb
+C:\Users\Minteah\Source\Repos\IntroToAI\Inference Engine\obj\Debug\Inference Engine.csprojResolveAssemblyReference.cache
+C:\Users\Minteah\Source\Repos\IntroToAI\Inference Engine\obj\Debug\Inference Engine.exe
+C:\Users\Minteah\Source\Repos\IntroToAI\Inference Engine\obj\Debug\Inference Engine.pdb
