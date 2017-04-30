@@ -1,0 +1,19 @@
+c:\users\soren\documents\visual studio 2015\Projects\IntroToAI\IntroToAI\bin\Debug\IntroToAI.exe.config
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\IntroToAI.exe.config
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\IntroToAI.exe.config
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\IntroToAI.exe
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\IntroToAI.pdb
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\obj\Debug\IntroToAI.csprojResolveAssemblyReference.cache
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\obj\Debug\IntroToAI.exe
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\obj\Debug\IntroToAI.pdb
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\IntroToAI.exe
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\IntroToAI.pdb
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\obj\Debug\IntroToAI.csprojResolveAssemblyReference.cache
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\obj\Debug\IntroToAI.exe
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\obj\Debug\IntroToAI.pdb
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\Inference Engine.exe
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\Inference Engine.pdb
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\KnowledgeBase.txt
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\KnowledgeBase.txt
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\Inference Engine.exe
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\Inference Engine.pdb

@@ -1,0 +1,14 @@
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\bin\Debug\Inference Engine.exe.config
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\bin\Debug\Inference Engine.exe
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\bin\Debug\Inference Engine.pdb
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\obj\Debug\Inference Engine.exe
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\obj\Debug\Inference Engine.pdb
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\bin\Debug\KnowledgeBase.txt
+F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\obj\Debug\Inference Engine.csprojResolveAssemblyReference.cache
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\bin\Debug\KnowledgeBase.txt
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\bin\Debug\Inference Engine.exe.config
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\bin\Debug\Inference Engine.exe
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\bin\Debug\Inference Engine.pdb
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\obj\Debug\Inference Engine.csprojResolveAssemblyReference.cache
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\obj\Debug\Inference Engine.exe
+C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\Inference Engine\obj\Debug\Inference Engine.pdb
