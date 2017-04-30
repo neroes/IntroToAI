@@ -9,7 +9,7 @@ namespace Inference_Engine
 
     public struct KnowledgeBaseEntry
     {
-        enum Clause : byte { Null, True, False, Both };
+        enum Clause: byte{ Null, True, False, Both };
         Clause[] clauses;
 
         public override bool Equals(Object obj)
@@ -34,7 +34,7 @@ namespace Inference_Engine
 
             for (int i = 0; i < clauses.Length; i++)
             {
-                result = prime * result + (int)clauses[i] * 13;
+                result = prime * result + (int) clauses[i] * 13;
             }
 
             return result;
