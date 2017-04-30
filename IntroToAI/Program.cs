@@ -13,10 +13,10 @@ namespace IntroToAI
         {
             Map map = DataReader.ReadMap("manhattan.txt");
 
-            //Node start = map.lookup("startstreetx", "startstreety");
-            //Node stop = map.lookup("stopstreetx", "stopstreety");
-            Node start = map.findNode(0, 0);
-            Node stop = map.findNode(1, 5);
+            Node start = map.lookup("avenue_0", "street_0");
+            Node stop = map.lookup("avenue_9", "street_0");
+            //Node start = map.findNode(0, 0);
+            //Node stop = map.findNode(1, 5);
 
 
             Path Route = solver(start, stop, map);
@@ -27,6 +27,10 @@ namespace IntroToAI
                 if (currentstreet.isStreetName(Route.parent.getStreetName(Route.me)))
                 {
                     currentstreet.updateStart(Route.parent.me);
+                    if (Route.parent.parent == null)
+                    {
+                        readout.AddFirst(currentstreet);
+                    }
                 }
                 else
                 {
@@ -41,9 +45,6 @@ namespace IntroToAI
             }
             Inference_Engine.Program.run();
 
-            
-
-
             System.Console.Write("pizza");
         }
         public static Path solver(Node start, Node finish, Map map)
@@ -51,7 +52,7 @@ namespace IntroToAI
             Path.setgoal(finish);
             Path startPath = new Path(start);
             
-            Search search = new Search();
+            Search search = new Search(new Astar());
             search.addToFrontier(startPath);
 
             while (!search.frontierIsEmpty())
@@ -64,7 +65,10 @@ namespace IntroToAI
                     if (!search.inExplored(nnode))
                     {
                         Path npath = new Path(spath, nnode);
-                        if (npath.isGoal()) { return npath; }
+                        if (npath.isGoal()) {
+                            search.frontierIsEmpty();
+                            return npath;
+                        }
                         search.addToFrontier(npath);
                         
                     }
@@ -104,7 +108,7 @@ namespace IntroToAI
         }
         public string toString()
         {
-            return start.point.X + " " + start.point.Y + " " + roadName + " " + stop.point.X + " " + stop.point.Y + "\t" + "| G: " + g + "| H: " + h + "| F: "+f();
+            return start.point.X + " " + start.point.Y + " " + roadName + " " + stop.point.X + " " + stop.point.Y + "\t| G: " + g + "\t| H: " + h + "\t| F: "+f();
         }
     }
 }

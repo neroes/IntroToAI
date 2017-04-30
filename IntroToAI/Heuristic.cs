@@ -7,58 +7,71 @@ using System.Threading.Tasks;
 
 namespace IntroToAI
 {
-    class Heuristic<Map> : IComparer<Path>
-    {
-        int gm;
-        int hm;
-
-        public int Compare(Path x, Path y)
+    abstract class Heuristic : IComparer<Path>
+    {        
+        public virtual int Compare(Path x, Path y)
         {
-            return f(x).CompareTo(f(y));
+            int comp = f(x).CompareTo(f(y));
+            if (comp == 0) { return x.id.CompareTo(y.id); }
+            return comp;
         }
 
-        private double f(Path p)
-        {
-            return h(p) * hm + g(p) * gm;
-        }
-        
-        private double h(Path p)
+        internal double h(Path p)
         {
             return p.distanceRem;
         }
 
-        private double g(Path p)
+        internal double g(Path p)
         {
             return p.distanceCov;
         }
+        
+        public virtual double f(Path p) { return 0; }
+    }
 
-        private void astar()
+    class Astar : Heuristic
+    {
+        public override double f(Path m)
         {
-            gm = 1;
-            hm = 1;
+            return g(m) + h(m);
+        }
+    }
+
+    class WAstar : Heuristic
+    {
+        private int W;
+
+        public WAstar(int W)
+        {
+            this.W = W;
         }
 
-        private void wastar()
+        public override double f(Path m)
         {
-            gm = 1;
-            hm = 5;
+            return g(m) + h(m) * W;
         }
+    }
 
-        private void greedy()
+    class Greedy : Heuristic
+    {
+        public override double f(Path m)
         {
-            gm = 0;
-            hm = 1;
+            return h(m);
         }
+    }
 
-        private void bfs()
+    class BFS : Heuristic {
+        public override int Compare(Path x, Path y)
         {
-            gm = 1;
-            hm = 0;
+            return x.id.CompareTo(y.id);
         }
+    }
 
-        private void dfs()
+    class DFS : Heuristic
+    {
+        public override int Compare(Path x, Path y)
         {
-
+            return y.id.CompareTo(x.id);
         }
     }
 }

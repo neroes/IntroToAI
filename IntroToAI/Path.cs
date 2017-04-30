@@ -8,6 +8,9 @@ namespace IntroToAI
 {
     class Path
     {
+        private static long _id = 0;
+
+        public long id;
         static Node goal;
         public Path parent;
         public Node me;
@@ -15,6 +18,7 @@ namespace IntroToAI
         public double distanceRem;
         public Path (Node node)
         {
+            id = _id++;
             me = node;
             distanceRem = me.getdistance(goal);
         }
