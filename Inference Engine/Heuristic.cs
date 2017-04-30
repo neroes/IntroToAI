@@ -14,7 +14,9 @@ namespace Inference_Engine
 
         public int Compare(Path x, Path y)
         {
-            return f(x).CompareTo(f(y));
+            int res = f(x).CompareTo(f(y));
+            if (res == 0) { return x.id.CompareTo(y.id); }
+            return res;
         }
 
         private int f(Path p)

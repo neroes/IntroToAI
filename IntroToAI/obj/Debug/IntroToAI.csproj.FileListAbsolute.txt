@@ -17,3 +17,12 @@ F:\One Drive\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\Knowle
 C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\KnowledgeBase.txt
 C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\Inference Engine.exe
 C:\Users\soren\OneDrive\Documents\Semester 10\IntroToAI\IntroToAI\bin\Debug\Inference Engine.pdb
+C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\bin\Debug\IntroToAI.exe.config
+C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\obj\Debug\IntroToAI.exe
+C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\obj\Debug\IntroToAI.pdb
+C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\bin\Debug\KnowledgeBase.txt
+C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\bin\Debug\IntroToAI.exe
+C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\bin\Debug\IntroToAI.pdb
+C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\bin\Debug\Inference Engine.exe
+C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\bin\Debug\Inference Engine.pdb
+C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\obj\Debug\IntroToAI.csprojResolveAssemblyReference.cache
