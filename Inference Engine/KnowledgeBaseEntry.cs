@@ -12,6 +12,34 @@ namespace Inference_Engine
         enum Clause: byte{ True, False, Both, Null };
         Clause[] clauses;
 
+        public override bool Equals(Object obj)
+        {
+            if (!(obj is KnowledgeBaseEntry))
+                return false;
+            Clause[] objc = ((KnowledgeBaseEntry)obj).clauses;
+            for (int i = 0; i < clauses.Length; i++)
+            {
+                if (objc[i] != clauses[i])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public override int GetHashCode()
+        {
+            int prime = 37;
+            int result = 1;
+
+            for (int i = 0; i < clauses.Length; i++)
+            {
+                result = prime * result + (int) clauses[i] * 13;
+            }
+
+            return result;
+        }
+
         public KnowledgeBaseEntry(string input)
         {
             clauses = new Clause[4];
