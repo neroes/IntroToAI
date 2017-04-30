@@ -27,10 +27,6 @@ namespace IntroToAI
                 if (currentstreet.isStreetName(Route.parent.getStreetName(Route.me)))
                 {
                     currentstreet.updateStart(Route.parent.me);
-                    if (Route.parent.parent == null)
-                    {
-                        readout.AddFirst(currentstreet);
-                    }
                 }
                 else
                 {
@@ -39,6 +35,7 @@ namespace IntroToAI
                 }
                 Route = Route.parent;
             }
+            readout.AddFirst(currentstreet);
             foreach (Mapreadout read in readout)
             {
                 System.Console.WriteLine(read.toString());
