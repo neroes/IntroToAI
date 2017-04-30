@@ -29,17 +29,17 @@ namespace Inference_Engine
                 results.AddFirst(solution.toString());
                 solution = solution.parent;
             }
-            foreach(string result in results)
+            foreach (string result in results)
             {
                 System.Console.WriteLine(result);
             }
-            
+
         }
         public static Path solver(Collection<KnowledgeBaseEntry> knowledge, KnowledgeBaseEntry start)
         {
             Path startpath = new Path(start);
 
-            Search search = new Search();
+            Search search = new Search(new Astar());
             search.addToFrontier(startpath);
             while (!search.frontierIsEmpty())
             {
@@ -58,7 +58,7 @@ namespace Inference_Engine
             System.Console.WriteLine("haps");
             return null;
         }
-        
+
     }
     public class Path
     {
@@ -75,7 +75,7 @@ namespace Inference_Engine
             g = 0;
             this.current = current;
         }
-        public Path(Path parent,KnowledgeBaseEntry current, KnowledgeBaseEntry combiner)
+        public Path(Path parent, KnowledgeBaseEntry current, KnowledgeBaseEntry combiner)
         {
             id = _id++;
             this.parent = parent;
@@ -86,7 +86,7 @@ namespace Inference_Engine
         public string toString()
         {
             string basestring = "( " + parent.current.toString() + " ) && (" + combiner.toString() + " ) -> " + current.toString();
-            string functionstring = "\t | H = " + current.h() + "\t | G = " + g + "\t | F = " + (current.h()+g);
+            string functionstring = "\t | H = " + current.h() + "\t | G = " + g + "\t | F = " + (current.h() + g);
             return basestring + functionstring;
         }
         public override bool Equals(Object obj)

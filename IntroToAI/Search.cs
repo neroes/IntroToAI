@@ -9,13 +9,18 @@ namespace IntroToAI
 {
     class Search
     {
-        private static Heuristic<Path> h = new Heuristic<Path>();
-        private SortedSet<Path> frontier = new SortedSet<Path>(h);
+        private static Heuristic h;
+        private SortedSet<Path> frontier;
         private HashSet<Node> explored = new HashSet<Node>();
+        
+        public Search(Heuristic newH)
+        {
+            h = newH;
+            frontier = new SortedSet<Path>(h);
+        }
 
         public void addToFrontier(Path path)
         {
-
             frontier.Add(path);
             explored.Add(path.me);
         }

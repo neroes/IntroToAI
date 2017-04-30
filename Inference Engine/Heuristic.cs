@@ -7,60 +7,72 @@ using System.Threading.Tasks;
 
 namespace Inference_Engine
 {
-    class Heuristic : IComparer<Path>
+    abstract class Heuristic : IComparer<Path>
     {
-        int gm;
-        int hm;
-
-        public int Compare(Path x, Path y)
+        public virtual int Compare(Path x, Path y)
         {
-            int res = f(x).CompareTo(f(y));
-            if (res == 0) { return x.id.CompareTo(y.id); }
-            return res;
+            int comp = f(x).CompareTo(f(y));
+            if (comp == 0) { return x.id.CompareTo(y.id); }
+            return comp;
         }
 
-        private int f(Path p)
+        internal int h(Path p)
         {
-            return  h(p) +g(p);
-        }
-        
-        private int h(Path p)
-        {
-            return p.current.h()*hm;
+            return p.current.h();
         }
 
-        private int g(Path p)
+        internal int g(Path p)
         {
-            return p.g*gm;
+            return p.g;
         }
 
-        private void astar()
+        public virtual int f(Path p) { return 0; }
+    }
+
+    class Astar : Heuristic
+    {
+        public override int f(Path m)
         {
-            gm = 1;
-            hm = 1;
+            return g(m) + h(m);
+        }
+    }
+
+    class WAstar : Heuristic
+    {
+        private int W;
+
+        public WAstar(int W)
+        {
+            this.W = W;
         }
 
-        private void wastar()
+        public override int f(Path m)
         {
-            gm = 1;
-            hm = 5;
+            return g(m) + h(m) * W;
         }
+    }
 
-        private void greedy()
+    class Greedy : Heuristic
+    {
+        public override int f(Path m)
         {
-            gm = 0;
-            hm = 1;
+            return h(m);
         }
+    }
 
-        private void bfs()
+    class BFS : Heuristic
+    {
+        public override int Compare(Path x, Path y)
         {
-            gm = 1;
-            hm = 0;
+            return x.id.CompareTo(y.id);
         }
+    }
 
-        private void dfs()
+    class DFS : Heuristic
+    {
+        public override int Compare(Path x, Path y)
         {
-
+            return y.id.CompareTo(x.id);
         }
     }
 }

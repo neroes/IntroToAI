@@ -9,9 +9,15 @@ namespace Inference_Engine
 {
     class Search
     {
-        private static Heuristic h = new Heuristic();
-        private SortedSet<Path> frontier = new SortedSet<Path>(h);
+        private static Heuristic h;
+        private SortedSet<Path> frontier;
         private HashSet<KnowledgeBaseEntry> explored = new HashSet<KnowledgeBaseEntry>();
+
+        public Search(Heuristic newH)
+        {
+            h = newH;
+            frontier = new SortedSet<Path>(h);
+        }
 
         public void addToFrontier(Path path)
         {
@@ -29,7 +35,7 @@ namespace Inference_Engine
             frontier.Remove(first);
             return first;
         }
-        
+
         public bool inFrontier(Path node)
         {
             foreach (Path path in frontier)
