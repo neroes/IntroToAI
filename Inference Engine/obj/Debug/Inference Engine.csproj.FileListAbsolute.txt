@@ -19,3 +19,10 @@ C:\Users\Minteah\Source\Repos\IntroToAI\Inference Engine\bin\Debug\Inference Eng
 C:\Users\Minteah\Source\Repos\IntroToAI\Inference Engine\obj\Debug\Inference Engine.csprojResolveAssemblyReference.cache
 C:\Users\Minteah\Source\Repos\IntroToAI\Inference Engine\obj\Debug\Inference Engine.exe
 C:\Users\Minteah\Source\Repos\IntroToAI\Inference Engine\obj\Debug\Inference Engine.pdb
+C:\Github\IntroToAI\Inference Engine\bin\Debug\KnowledgeBase.txt
+C:\Github\IntroToAI\Inference Engine\bin\Debug\Inference Engine.exe.config
+C:\Github\IntroToAI\Inference Engine\bin\Debug\Inference Engine.exe
+C:\Github\IntroToAI\Inference Engine\bin\Debug\Inference Engine.pdb
+C:\Github\IntroToAI\Inference Engine\obj\Debug\Inference Engine.csprojResolveAssemblyReference.cache
+C:\Github\IntroToAI\Inference Engine\obj\Debug\Inference Engine.exe
+C:\Github\IntroToAI\Inference Engine\obj\Debug\Inference Engine.pdb

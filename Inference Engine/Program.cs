@@ -22,7 +22,12 @@ namespace Inference_Engine
             {
                 knowledge.Add(new KnowledgeBaseEntry(s));
             }
-            solver(knowledge, new KnowledgeBaseEntry("~a"));
+            Path solution = solver(knowledge, new KnowledgeBaseEntry("~a"));
+            while (solution.parent != null)
+            {
+                System.Console.WriteLine(solution.toString());
+                solution = solution.parent;
+            }
         }
         public static Path solver(Collection<KnowledgeBaseEntry> knowledge, KnowledgeBaseEntry start)
         {
@@ -38,7 +43,7 @@ namespace Inference_Engine
                 foreach (KnowledgeBaseEntry knowentry in knowledge)
                 {
                     KnowledgeBaseEntry newKnow = new KnowledgeBaseEntry(current.current, knowentry);
-                    Path next = new Path(current, newKnow);
+                    Path next = new Path(current, newKnow, knowentry);
                     if (!search.inExplored(next.current))
                     {
                         search.addToFrontier(next);
@@ -56,6 +61,7 @@ namespace Inference_Engine
 
         public long id;
         public Path parent;
+        public KnowledgeBaseEntry combiner;
         public KnowledgeBaseEntry current;
         public int g;
         public Path(KnowledgeBaseEntry current)
@@ -64,14 +70,20 @@ namespace Inference_Engine
             g = 0;
             this.current = current;
         }
-        public Path(Path parent,KnowledgeBaseEntry current)
+        public Path(Path parent,KnowledgeBaseEntry current, KnowledgeBaseEntry combiner)
         {
             id = _id++;
             this.parent = parent;
             this.current = current;
+            this.combiner = combiner;
             g = this.parent.g + 1;
         }
-
+        public string toString()
+        {
+            string basestring = "( " + parent.current.toString() + " ) && (" + combiner.toString() + " ) -> " + current.toString();
+            string functionstring = "\t | H = " + current.h() + "\t | G = " + g + "\t | F = " + (current.h()+g);
+            return basestring + functionstring;
+        }
         public override bool Equals(Object obj)
         {
             return obj is Path && current.Equals(((Path)obj).current);

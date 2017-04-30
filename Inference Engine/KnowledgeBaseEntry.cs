@@ -9,7 +9,7 @@ namespace Inference_Engine
 
     public struct KnowledgeBaseEntry
     {
-        enum Clause: byte{ True, False, Both, Null };
+        enum Clause: byte{ Null, True, False, Both };
         Clause[] clauses;
 
         public override bool Equals(Object obj)
@@ -110,11 +110,11 @@ namespace Inference_Engine
                 {
                     clauses[i] = Clause.Null;
                 }
-                else if (know2[i] == Clause.False)
+                else if (know2[i] == Clause.False || know1[i] == Clause.False)
                 {
                     clauses[i] = Clause.False;
                 }
-                else if (know2[i] == Clause.True)
+                else if (know2[i] == Clause.True || know1[i] == Clause.True)
                 {
                     clauses[i] = Clause.True;
                 }
@@ -158,9 +158,10 @@ namespace Inference_Engine
             letters[0] = 'a'; letters[1] = 'b'; letters[2] = 'c'; letters[3] = 'd';
             string returnstring = "";
             int i = 0;
-            while (clauses[i] == Clause.Both)
+            while (clauses[i] == Clause.Null)
             {
                 i++;
+                if (i == 4) { return "[]"; }
             }
             switch (clauses[i])
             {

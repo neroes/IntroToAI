@@ -15,11 +15,7 @@ namespace Inference_Engine
 
         public void addToFrontier(Path path)
         {
-            System.Console.WriteLine(path.current.toString());
-            if (!frontier.Add(path))
-            {
-                System.Console.WriteLine(path.current.toString());
-            }
+            frontier.Add(path);
 
             explored.Add(path.current);
         }
