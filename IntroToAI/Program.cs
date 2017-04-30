@@ -11,10 +11,10 @@ namespace IntroToAI
     {
         static void Main(string[] args)
         {
-            Map map = DataReader.ReadMap("manhattan.txt");
+            Map map = DataReader.ReadMap("copenhagen.txt");
 
-            Node start = map.lookup("avenue_0", "street_0");
-            Node stop = map.lookup("avenue_9", "street_0");
+            Node start = map.lookup("Studiestraede", "Vestervoldgade");
+            Node stop = map.lookup("Noerrevoldgade", "LarslejStraede");
             //Node start = map.findNode(0, 0);
             //Node stop = map.findNode(1, 5);
 
@@ -43,7 +43,7 @@ namespace IntroToAI
             {
                 System.Console.WriteLine(read.toString());
             }
-            Inference_Engine.Program.run();
+            //Inference_Engine.Program.run();
 
             System.Console.Write("pizza");
         }
