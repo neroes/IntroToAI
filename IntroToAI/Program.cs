@@ -13,8 +13,8 @@ namespace IntroToAI
         {
             Map map = DataReader.ReadMap("copenhagen.txt");
 
-            Node start = map.lookup("Studiestraede", "Vestervoldgade");
-            Node stop = map.lookup("Noerrevoldgade", "LarslejStraede");
+            Node start = map.lookup("Studiestraede", "Larsbjoernsstraede");
+            Node stop = map.lookup("Noerrevoldgade", "Noerregade");
             //Node start = map.findNode(0, 0);
             //Node stop = map.findNode(1, 5);
 
@@ -55,19 +55,17 @@ namespace IntroToAI
             while (!search.frontierIsEmpty())
             {
                 Path spath = search.getFromFrontier();
-                if (spath.isGoal()) { return spath; }
+                if (spath.isGoal()) {
+                    search.frontierIsEmpty(); // This is for the debugger to access search and see the amount of explored nodes.
+                    return spath;
+                } 
                 List<Node> connectionlist = spath.getAllConnections();
                 foreach (Node nnode in connectionlist)
                 {
                     if (!search.inExplored(nnode))
                     {
                         Path npath = new Path(spath, nnode);
-                        if (npath.isGoal()) {
-                            search.frontierIsEmpty();
-                            return npath;
-                        }
                         search.addToFrontier(npath);
-                        
                     }
                     
                 }
@@ -105,7 +103,7 @@ namespace IntroToAI
         }
         public string toString()
         {
-            return start.point.X + " " + start.point.Y + " " + roadName + " " + stop.point.X + " " + stop.point.Y + "\t| G: " + g + "\t| H: " + h + "\t| F: "+f();
+            return start.point.X + " " + start.point.Y + " " + roadName + " " + stop.point.X + " " + stop.point.Y + "\t| G: " + Math.Round(g, 3) + "\t| H: " + Math.Round(h, 3) + "\t| F: "+ Math.Round(f(), 3);
         }
     }
 }
