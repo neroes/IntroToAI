@@ -26,3 +26,10 @@ C:\Github\IntroToAI\Inference Engine\bin\Debug\Inference Engine.pdb
 C:\Github\IntroToAI\Inference Engine\obj\Debug\Inference Engine.csprojResolveAssemblyReference.cache
 C:\Github\IntroToAI\Inference Engine\obj\Debug\Inference Engine.exe
 C:\Github\IntroToAI\Inference Engine\obj\Debug\Inference Engine.pdb
+F:\Github\IntroToAI\Inference Engine\bin\Debug\KnowledgeBase.txt
+F:\Github\IntroToAI\Inference Engine\bin\Debug\Inference Engine.exe.config
+F:\Github\IntroToAI\Inference Engine\bin\Debug\Inference Engine.exe
+F:\Github\IntroToAI\Inference Engine\bin\Debug\Inference Engine.pdb
+F:\Github\IntroToAI\Inference Engine\obj\Debug\Inference Engine.csprojResolveAssemblyReference.cache
+F:\Github\IntroToAI\Inference Engine\obj\Debug\Inference Engine.exe
+F:\Github\IntroToAI\Inference Engine\obj\Debug\Inference Engine.pdb

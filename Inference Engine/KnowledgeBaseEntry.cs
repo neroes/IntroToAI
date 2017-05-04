@@ -98,17 +98,21 @@ namespace Inference_Engine
             clauses = new Clause[4];
             for (int i = 0; i < 4; i++)
             {
-                if (know1[i] == Clause.False && know2[i] == Clause.True)
+                if (know1[i] == Clause.Both)
                 {
-                    clauses[i] = Clause.Null;
+                    clauses[i] = Clause.Both;
+                }
+                else if (know1[i] == Clause.False && know2[i] == Clause.True)
+                {
+                    clauses[i] = Clause.Both;
                 }
                 else if (know1[i] == Clause.True && know2[i] == Clause.False)
                 {
-                    clauses[i] = Clause.Null;
+                    clauses[i] = Clause.Both;
                 }
                 else if (know2[i] == Clause.Both)
                 {
-                    clauses[i] = Clause.Null;
+                    clauses[i] = Clause.Both;
                 }
                 else if (know2[i] == Clause.False || know1[i] == Clause.False)
                 {
@@ -129,7 +133,7 @@ namespace Inference_Engine
             int h = 0;
             foreach (Clause claus in clauses)
             {
-                if (claus != Clause.Null)
+                if (claus != Clause.Null ||claus != Clause.Both)
                 {
                     h++;
                 }
@@ -145,7 +149,7 @@ namespace Inference_Engine
         {
             foreach (Clause claus in clauses)
             {
-                if (claus != Clause.Null)
+                if (claus != Clause.Both)
                 {
                     return false;
                 }
@@ -191,6 +195,49 @@ namespace Inference_Engine
                     case Clause.Both:
                         returnstring += " || (" + letters[i] + " || ~" + letters[i] + ")";
                         break;
+                    case Clause.Null:
+                        break;
+                }
+                i++;
+            }
+            return returnstring;
+        }
+        public string toStringPath()
+        {
+            char[] letters = new char[4];
+            letters[0] = 'a'; letters[1] = 'b'; letters[2] = 'c'; letters[3] = 'd';
+            string returnstring = "";
+            int i = 0;
+            while (clauses[i] == Clause.Null || clauses[i] == Clause.Both)
+            {
+                i++;
+                if (i == 4) { return "[]"; }
+            }
+            switch (clauses[i])
+            {
+                case Clause.True:
+                    returnstring += letters[i];
+                    break;
+                case Clause.False:
+                    returnstring += "~" + letters[i];
+                    break;
+                case Clause.Both:
+                    break;
+                case Clause.Null:
+                    break;
+            }
+            i++;
+            while (i < 4)
+            {
+                switch (clauses[i])
+                {
+                    case Clause.True:
+                        returnstring += " || " + letters[i];
+                        break;
+                    case Clause.False:
+                        returnstring += " || ~" + letters[i];
+                        break;
+                    case Clause.Both:
                     case Clause.Null:
                         break;
                 }

@@ -26,3 +26,12 @@ C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\bin\Debug\IntroToAI.pdb
 C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\bin\Debug\Inference Engine.exe
 C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\bin\Debug\Inference Engine.pdb
 C:\Users\Minteah\Source\Repos\IntroToAI\IntroToAI\obj\Debug\IntroToAI.csprojResolveAssemblyReference.cache
+F:\Github\IntroToAI\IntroToAI\bin\Debug\IntroToAI.exe.config
+F:\Github\IntroToAI\IntroToAI\obj\Debug\IntroToAI.exe
+F:\Github\IntroToAI\IntroToAI\bin\Debug\KnowledgeBase.txt
+F:\Github\IntroToAI\IntroToAI\bin\Debug\IntroToAI.exe
+F:\Github\IntroToAI\IntroToAI\bin\Debug\IntroToAI.pdb
+F:\Github\IntroToAI\IntroToAI\bin\Debug\Inference Engine.exe
+F:\Github\IntroToAI\IntroToAI\bin\Debug\Inference Engine.pdb
+F:\Github\IntroToAI\IntroToAI\obj\Debug\IntroToAI.csprojResolveAssemblyReference.cache
+F:\Github\IntroToAI\IntroToAI\obj\Debug\IntroToAI.pdb

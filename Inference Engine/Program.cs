@@ -85,7 +85,7 @@ namespace Inference_Engine
         }
         public string toString()
         {
-            string basestring = "( " + parent.current.toString() + " ) && (" + combiner.toString() + " ) -> " + current.toString();
+            string basestring = "( " + parent.current.toStringPath() + " ) && (" + combiner.toString() + " ) -> " + current.toStringPath();
             string functionstring = "\t | H = " + current.h() + "\t | G = " + g + "\t | F = " + (current.h() + g);
             return basestring + functionstring;
         }

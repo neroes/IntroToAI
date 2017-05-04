@@ -40,7 +40,7 @@ namespace IntroToAI
             {
                 System.Console.WriteLine(read.toString());
             }
-            //Inference_Engine.Program.run();
+            Inference_Engine.Program.run();
 
             System.Console.Write("pizza");
         }
