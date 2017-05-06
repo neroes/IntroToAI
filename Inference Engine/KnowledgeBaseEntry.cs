@@ -133,7 +133,7 @@ namespace Inference_Engine
             int h = 0;
             foreach (Clause claus in clauses)
             {
-                if (claus != Clause.Null ||claus != Clause.Both)
+                if (claus != Clause.Both)
                 {
                     h++;
                 }
