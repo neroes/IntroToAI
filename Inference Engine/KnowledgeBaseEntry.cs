@@ -9,6 +9,8 @@ namespace Inference_Engine
 
     public struct KnowledgeBaseEntry
     {
+    // we switched the naming a bit due to an initial mix up with our naming
+    // this class is actually of clauses while the element called clauses is actually our literals
         enum Clause: byte{ Null, True, False, Both };
         Clause[] clauses;
 
